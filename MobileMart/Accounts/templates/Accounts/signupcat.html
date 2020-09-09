@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load bootstrap3 %}
+<style>
+	</style>
+		<section id="sec1" class="container-fluid" style="background-size:cover;height: 100vh;">
+                  <div class="jumbotron" style="position: relative;top: 100px; left:40%;width:13%;min-height:13vh;background-color: rgba(0,0,0,0.4);border:2px solid white;color: white;" data-aos="fade-right">      
+             <a href="{% url 'signup' %}"style="color:white;font-size: 25px; background-color: rgb(41, 61, 77)!important;"
+             class="btn btn-default">Admin</a><br><br>
+             <a href="{% url 'addcus' %}"style="color:white;font-size: 25px; background-color: rgb(41, 61, 77)!important;"
+             class="btn btn-default">Customer</a><br><br>
+             <a href="{% url 'signupcom' %}"style="color:white;font-size: 25px; background-color: rgb(41, 61, 77)!important;"
+             class="btn btn-default">Company</a>
+		</div>
+	</section>
+{% endblock %}

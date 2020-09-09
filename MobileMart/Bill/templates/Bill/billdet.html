@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load bootstrap3 %}
+		<div class="jumbotron" style="position: relative;top: 100px;min-height:73vh;background-color: rgba(0,0,0,0.4);border:2px solid white;color: white;" data-aos="fade-right">
+			<div class="col-lg-6" style="background-image: url('{{data.5}}');background-size: contain;min-height:55vh;margin-right: 20px;background-repeat: no-repeat;">
+			</div>	
+			<h1>User : <b>{{data.0}}</b></h1>
+			<p>Mobile : <b>{{data.2}}</b></p>
+			<p>Model : <b>{{data.3}}</b></p>
+			<p>Price : <b>{{data.4}}</b></p>
+			<p>Card : <b>{{data.6}}</b></p>
+			<p>Hold : <b>{{data.7}}</b></p>
+			<p>Date : <b>{{data.8}}</b></p>
+			<p>Month : <b>{{data.9}}</b></p>
+			<p>CVV : <b>{{data.10}}</b></p>
+		</div>
+	</section>
+{% endblock %}

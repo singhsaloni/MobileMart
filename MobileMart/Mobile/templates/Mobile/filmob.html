@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load bootstrap3 %}
+<style>
+	.dataTables_filter {
+		display: none;
+		}
+		</style>
+		<div class="jumbotron" style="position: relative;top: 100px;min-height:73vh;background-color: rgba(0,0,0,0.4);border:2px solid white;color: white;" data-aos="fade-right">
+			<form action="{% url 'filmob' %}" method="POST" class="col-lg-5">
+				{% csrf_token %}
+				<div class="form-group">
+					<label>Mobile : </label>
+					<input type="text" name="mob" class="form-control" placeholder="Filter Mobile..">
+				</div>
+				<div class="form-group">
+					<label>Model : </label>
+					<input type="text" name="mod" class="form-control" placeholder="Filter Model..">
+				</div>
+				<div class="form-group">
+					<label>From : </label>
+					<input type="text" name="from" class="form-control" placeholder="Enter Range From..">
+				</div>
+				<div class="form-group">
+					<label>To : </label>
+					<input type="text" name="to" class="form-control" placeholder="Enter Range To..">
+				</div>
+				<div class="form-group">
+					<label>Date: </label>
+					<input type="date" name="dt" class="form-control">
+				</div>
+				<div class="form-group">
+				<input style="color:white;font-size: 25px; background-color: rgb(41, 61, 77);"type="submit" class="btn btn-info" value="Filter">
+			</div>
+			</form>
+			<table id="example" class="table  table-bordered" style="width:100%;">
+				<thead>
+				<tr>
+					<th>Mobile</th>
+					<th>Model</th>
+					<th>Price</th>
+					<th>Quantity</th>
+					<th>Charger</th>
+					<th>Battery</th>
+					<th>Headset</th>
+					<th>Memory</th>
+					<th>Datacable</th>
+					<th>Description</th>
+					<th>Date</th>
+					<th>Action</th>
+					<th>More</th>
+				</tr>
+				</thead>
+				{% for i in data %}
+				<tbody>
+				<tr>
+					<td>{{i.0}}</td>
+					<td>{{i.1}}</td>
+					<td>{{i.2}}</td>
+					<td>{{i.3}}</td>
+					<td>{{i.4}}</td>
+					<td>{{i.5}}</td>
+					<td>{{i.6}}</td>
+					<td>{{i.7}}</td>
+					<td>{{i.8}}</td>
+					<td>{{i.10}}</td>
+					<td>{{i.12}}</td>
+					<td style="color:black;">
+						<a href="{}"><button class="btn btn-primary">Delete</button></a>
+						<a href="{}"><button class="btn btn-primary">Edit</button></a>
+					</td>
+					<td><a href="{% url 'mobdet' i.11 %}"style="color:white;font-size: 25px; background-color: rgb(41, 61, 77)!important;" class="btn btn-default">More</a></td>
+				</tr>	
+			</tbody>
+				{% endfor %}
+			</table>
+			<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#example').DataTable();
+} );
+</script>
+		</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load bootstrap3 %}
+<style>
+.dataTables_filter {
+	display: none;
+	}
+	</style>
+		<div class="jumbotron" style="position: relative;top: 100px;min-height:73vh;background-color: rgba(0,0,0,0.4);border:2px solid white;color: white;" data-aos="fade-right">
+			<table id="example" class="table  table-bordered" style="width:100%">
+				<thead>
+				<tr>
+					<th>Brand</th>
+                    <th>Delete</th>
+				</tr>
+				</thead>
+				{% for i in data %}
+				<tbody>
+				<tr>
+					<td>{{i.1}}</td>
+					
+					<td style="color:black;">
+						<a href="{% url 'delete_com' id=i.0 %}"><button class="btn btn-primary">Delete</button></a>	</td>
+				</tr>	
+			</tbody>
+				{% endfor %}
+			</table>
+			<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#example').DataTable();
+} );
+</script>
+		</div>
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load bootstrap3 %}
+	<section id="sec1" class="container-fluid" style="background-size:cover;height: 100vh;">
+		<div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="col-md-3"></div>
+		<div class="col-md-6 jumbotron" style="position: relative;top: 100px;min-height:80vh;background-color: rgba(0,0,0,0.4);border:2px solid white;color: white;" data-aos="fade-right">
+				<form action="{% url 'editpro' %}" method="POST" enctype="multipart/form-data">
+					{% csrf_token %}
+					<div class="form-row">
+						<div class="form-group col-md-12">
+						<label>Username:</label>
+						<input type="text" name="us" value="{{user}}" class="form-control"></div>
+						<div class="form-group col-md-12">
+						</div></div>
+	                    <div class="form-row">
+							<div class="form-group col-md-6">
+						<label>First Name:</label>
+						<input type="text" name="first" class="form-control" value="{{user.first_name}}">
+					</div>					
+					<div class="form-group col-md-6">
+						<label>Last Name:</label>
+						<input type="text" name="last" class="form-control" value="{{user.last_name}}">
+					</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+						<label>Aadhar No.:</label>
+						<input type="number" name="aadhar" class="form-control" value="{{user.aadhar}}">
+					</div>
+					<div class="form-group col-md-6">
+						<label>Mobile:</label>
+						<input type="number" name="mobile" class="form-control" value="{{user.mobile}}">
+					</div></div>
+					<div class="form-group col-md-12">
+						<label>Email:</label>
+						<input type="email" name="email" class="form-control" value="{{user.email}}">						
+					</div>		
+					<div class="form-group col-md-12">
+						<label>Address:</label>
+						<textarea name="address" class="form-control" value="{{user.address}}">							
+						</textarea>
+					</div>			
+					<div style="margin-left: -14px;"class="col-md-6">	
+						<div class="form-group ">
+							<label>Image : </label>
+							<input type='file' name="file" id="imgInp" />
+						</div>
+						<br>
+						<div class="form-group">
+							<input  style="color:white;font-size: 25px; background-color: rgb(41, 61, 77);"type="submit" value="Add" class="btn btn-default">
+						</div></div>
+						<div style=" margin-top:20px;margin-left: 100px; text-align: center;  background-color: blanchedalmond; background-size: cover; height:250px; width:230px; border:2px solid white" class="col-md-6">
+							<img style="height:250px; width:230px; margin-left:-17px;vertical-align: middle;" id="blah" src="#" alt="your image" />
+						</div>
+				</form>
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+	</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          $('#blah').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+    $("#imgInp").change(function() {
+      readURL(this);
+    });
+</script>
+	</section>
+{% endblock %}

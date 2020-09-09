@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load bootstrap3 %}
+	<section id="sec1" class="container-fluid" style="background-size:cover;height: 100vh;">
+		<div class="jumbotron" style="position: relative;top: 100px;min-height:73vh;background-color: rgba(0,0,0,0.4);border:2px solid white;color: white;" data-aos="fade-right">
+			<div class="col-lg-6" style="background-image: url('/static/login2.gif');background-size: cover;min-height:55vh;">
+			</div>
+			<div class="col-lg-6">
+				<form action="{% url 'login' %}" method="POST">
+					{% csrf_token %}
+					{% bootstrap_form form %}	
+					<input type="submit" class="btn btn-info" value="Login">
+					<div class="control">
+						<a href="{% url 'reset_password' %}">Forgot password?</a>
+					  </div>	
+		</form>
+			</div>
+		</div>
+	</section>
+{% endblock %}

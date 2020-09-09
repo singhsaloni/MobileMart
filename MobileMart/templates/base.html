@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Josefin+Slab&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <style type="text/css">
+  	.navbar
+  	{
+      
+  		background-color: rgb(41, 61, 77) ;
+  		box-shadow: 0px 10px 15px black;
+  		border:none;
+      border-bottom: 2px solid black;
+      height: 100px ;
+    }
+    .form-control{
+font-size: 25px;
+color: rgba(0,0,0);
+height: 50px;
+}
+  	body
+  	{
+    padding-bottom: 20px;
+      font-family: 'Josefin Slab', serif;	
+   background-image:url('/static/b2.jpg');
+   background-size:cover;
+   overflow-x: hidden;
+   font-size:25px;
+     	}
+  	a
+  	{
+  		color:white !important;
+  	}
+    li,.help-block
+    {
+      color:grey !important;
+    }
+  	button	
+  	{
+  		color:black !important;
+  		background: grey !important;
+  	}
+  	a:hover
+  	{
+  		background-color:grey !important;
+  		color:black !important; 
+  		transition: 0.6s !important;
+  	}
+  	.active a
+  	{
+  		background-color:grey !important;
+  		color:black !important; 
+  		transition: 0.6s !important;
+  	}
+  	html
+  	{
+  		scroll-behavior: smooth;
+      min-height: 100vh;
+  	}
+    i:hover{
+ 	color: aqua;
+ 	font-size:50px;
+ }
+ i{
+ 	color:blanchedalmond;
+ 	}
+   .mcontainer {
+  width: 96% !important;
+  height: 400px !important;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: black;
+  background-size: cover;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 5px #000;
+  box-shadow: 0 0 5px #000;
+}
+#ccc:hover
+{
+background-color: transparent !important;
+}
+.moverlay {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 2fr 1fr;
+  background: rgba(77, 77, 77, 0.9);
+  color: #FEF5DF;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.mitems {
+  padding-left: 20px;
+  letter-spacing: 3px;
+}
+.mhead {
+  font-size: 30px;
+  line-height: 40px;
+  transform: translateY(40px);
+  transition: all 0.7s;
+}
+.mhead hr {
+  display: block;
+  width: 0;
+  border: none;
+  border-bottom: solid 2px #FEF5DF;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  transition: all .5s;
+}
+.mprice {
+  font-size: 22px;
+  line-height: 10px;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s;
+}
+.mprice .mold {
+  text-decoration: line-through;
+  color: #b3b3b3;
+}
+.mcart {
+  font-size: 12px;
+  opacity: 0;
+  letter-spacing: 1px;
+  font-family: 'Lato', sans-serif;
+  transform: translateY(40px);
+  transition: all 0.7s;
+}
+.mcart i {
+  font-size: 16px;
+}
+.mcart span {
+  margin-left: 10px;
+}
+.mcontainer:hover .moverlay {
+  opacity: 1;
+}
+.mcontainer:hover .moverlay .mhead {
+  transform: translateY(0px);
+}
+.mcontainer:hover .moverlay hr {
+  width: 75px;
+  transition-delay: 0.4s;
+}
+.mcontainer:hover .moverlay .mprice {
+  transform: translateY(0px);
+  transition-delay: 0.3s;
+  opacity: 1;
+}
+.mcontainer:hover .moverlay .mcart {
+  transform: translateY(0px);
+  transition-delay: 0.6s;
+  opacity: 1;
+}
+  .logo-image{
+        width: 270px;
+        height: 92px;
+       margin-top: -11px;
+        overflow: hidden;
+        }
+    .head-image{
+      width: 650px;
+        height: 230px;
+      margin-left: 780px;
+        overflow: hidden;
+    }
+  table{
+    color: blanchedalmond;
+  }
+    #img1:hover
+    {
+      opacity: 0.6;
+    }
+    #div1:hover{
+      box-shadow:0px 10px 20px black;
+      }
+  </style>
+   </head>
+  <body data-spy="scroll" data-target=".navbar"> 
+	<nav style="font-size:25px "class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+	<div class="navbar-header">
+  <div  class="navbar-brand" href="/">
+  <div class="logo-image">
+  <img id="img1" src="/static/Capture.png" class="img-responsive">
+  </div>
+  </div>
+  <button style="background-color: rgb(41, 61, 77) !important;" class="navbar-toggle" data-toggle="collapse" data-target="#mydiv">
+  <span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  </button>
+	</div>
+	<div style=" margin-top: 30px;     background-color: rgb(41, 61, 77) !important;"class="collapse navbar-collapse" id="mydiv">
+	{% if user.is_superuser %}
+	<ul class="nav navbar-nav">
+	<li><a href="{% url 'home' %}">Home</a></li>
+ <li class="dropdown">
+	<a href="" class="dropdown-toggle" type="button" data-toggle="dropdown">Customer
+  <span class="caret"></span></a>
+  <ul class="dropdown-menu" style="font-size:25px;background-color: rgb(41, 61, 77);">
+    <li><a href="{% url 'cuslist' %}">Customers List</a></li>
+  </ul>
+	</li>
+	<li class="dropdown">
+	<a href="" class="dropdown-toggle" type="button" data-toggle="dropdown">Mobiles
+  <span class="caret"></span></a>
+  <ul class="dropdown-menu" style="font-size:25px; background-color: rgb(41, 61, 77);">
+  <li><a href="{% url 'addmob' %}">Add Mobile</a></li>
+  <li><a href="{% url 'moblist' %}">Mobile Details</a></li>
+  <li><a href="{% url 'filmob' %}">Filter Mobiles</a></li>
+  </ul>
+  </li>
+  <li class="dropdown">
+  <a href="" class="dropdown-toggle" type="button" data-toggle="dropdown">Company
+  <span class="caret"></span></a>
+  <ul class="dropdown-menu" style="font-size:25px; background-color: rgb(41, 61, 77);">
+                  
+  <li><a href="{% url 'comlist' %}">Company list</a></li>
+  </ul>
+  </li>
+<li><a href="{% url 'searchbill' %}">Search Bill</a></li>
+	<li><a href="{% url 'transactions' %}">All Transactions</a></li>
+  </ul>		
+  <ul class="nav navbar-nav navbar-right">
+          <li><a href="{% url 'cusdetail' u=user %}">Profile</a></li>    
+        </ul>     
+
+
+        {% elif user.profile.is_customer %}
+        <ul class="nav navbar-nav">
+          
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+          <li><a href="{% url 'cfilmob' %}">Search Mobiles</a></li>
+          
+          
+        </ul>     
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li><a href="{% url 'cusdetail' u=user %}">Profile</a></li>
+          <li><a href="{% url 'viewcart' %}">View Cart</a></li>
+          
+          
+        </ul>     
+
+        {% elif user.profile.is_compamy %}
+        <ul class="nav navbar-nav">
+          
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+          <li><a href="{% url 'addcom' %}">Add Your Company</a></li>
+          
+          
+        </ul>     
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li><a href="{% url 'cusdetail' u=user %}">Profile</a></li>
+          
+          
+          
+          
+        </ul>    
+
+        {% else %}
+        <ul class="nav navbar-nav">
+          
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+          <li><a href="{% url 'cfilmob' %}">Search Mobiles</a></li>
+          
+          
+        </ul>     
+      {% endif %}  
+
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="" class="dropdown-toggle" type="button" data-toggle="dropdown">Accounts
+  <span class="caret"></span></a>
+  <ul class="dropdown-menu" style="font-size:25px;background-color: rgb(41, 61, 77);">
+    <li>
+
+    {% if not user.is_authenticated %}
+      <a href="{% url 'login' %}">Login</a></li>
+					<li><a href="{% url 'signupcat' %}">SignUp</a></li>
+		{% else %}
+    			<li><a href="{% url 'logout' %}">Logout</a></li>
+    
+					
+    </ul>
+    {% endif %}
+    <li><div style=" border-radius: 50%; margin-top:-14px; width: 70px; height: 70px;" ><img  src="" style="border-radius: 50%;"></div></li>
+  				<li><a href="{% url 'editpro' %}" >Welcome {{user}}..!!</a></li>
+
+				</ul>
+			</div>
+
+		</div>
+  </nav>
+
+	<section id="sec1" class="container-fluid" style="background-size:cover;height: 100vh;">
+<br><br><br>
+
+{% block content %}
+		<div class="jumbotron" style="position: relative;top: 100px;background-color: rgba(140, 204, 211, 0.694);border:2px solid white;color: white;" data-aos="fade-right">
+      <div class="row">
+      <div id="div1" class="col-md-2">
+      </div>
+      <div style=""class="col-md-8">
+      {% if messages %}
+    {% for i in messages %}
+      <div class="alert alert-success alert-dismissible
+      e" style="position: relative;">
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+      {{i}}</div>
+    {% endfor %}
+  {% endif %}
+  <div  style=" margin-left: 25%; " class="head-image">
+    <img style=" margin-left: 20px;   height: 230px;width: 650px;" src="/static/Capture.png">
+</div><br><br>
+			<h1 style="text-align: center; color: black;">Your NeighBourHood Online Mobile Shop...</h1>
+      <h2 style="text-align: center; color: black;">Lets Drive to Mart..</h2>
+      </div>
+      
+
+	</section>
+
+{% endblock %}
+<script>
+  AOS.init({
+  	duration:1500,
+  });
+</script>
+<footer>
+
+
+  <h1 style="font-size:40px; text-align:right;">
+      <a href="https://www.facebook.com">
+      <i  class="fa fa-facebook"></i></a>
+          <a href="https://www.instagram.com">
+      <i class="fa fa-instagram"></i></a>
+        <a href="https://www.twitter.com">
+      <i class="fa fa-twitter"></i></a>
+        <a href="https://www.linkedin.com">
+      <i class="fa fa-linkedin"></i></a>
+      <a href="https://www.pinterest.com">
+      <i class="fa fa-pinterest"></i></a>
+  
+  </h1>
+
+	</footer>
+  
+  
+</body>
+</html>
