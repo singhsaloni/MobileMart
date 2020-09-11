@@ -38,7 +38,7 @@ arrivals
 |Database Design|MySQL version 5.7.19|
 |Interface Design|Visual Studio code version 1.48.1| 	             
 |Coding | Python 3 with Django|
------
+
 <br>
 
 ### <ins>*Cost Estimation*</ins>
