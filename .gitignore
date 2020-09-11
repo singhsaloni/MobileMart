@@ -1,6 +1,2 @@
 MobileMart/MobileMart/settings.py
-MobileMart/MobileMart/__pycache__
-MobileMart/Bill/__pycache__
-MobileMart/Accounts/__pycache__
-MobileMart/Customer/__pycache__
-MobileMart/Mobile/__pycache__
+__pycache__
