@@ -59,21 +59,21 @@ Taking the values of the coefficients as:
  
 1. Effort Applied (E) = ab(KLOC)bb [ man-months ] 
  >
-	 	= 2.4(2.051)1.05 
-	 	= 2.4 x 2.126
-        = 5.102 [man-months] 
+	= 2.4(2.051)1.05 
+	= 2.4 x 2.126
+    = 5.102 [man-months] 
  
 2.	Development Time (D) = cb (Effort Applied)d [months] 
 >
-	 	= 2.5(5.102)0.38 
-        = 2.5 x 1.857 
-        = 4.644 [months] 
+	= 2.5(5.102)0.38 
+    = 2.5 x 1.857 
+    = 4.644 [months] 
 
 3.	People Required (P) = Effort Applied / Development Time [count] 
  >
-        = 5.102 / 4.644 
-        =1.099  
-        ≈ 1
+    = 5.102 / 4.644 
+    =1.099  
+    ≈ 1
 
 
 ### <ins>*Resources*</ins>
